@@ -52,7 +52,7 @@ bool? isEmpty(dynamic value) {
 /// standard dart types that contains it.
 ///
 /// This is here to for the 'DRY'
-bool _hasLength(dynamic value) {
+bool hasLength(dynamic value) {
   return value is Iterable || value is String || value is Map;
 }
 
@@ -66,13 +66,13 @@ bool _hasLength(dynamic value) {
 /// Note 2: **this may return null!**
 ///
 /// Note 3: null [value] returns null.
-int? _obtainDynamicLength(dynamic value) {
+int? obtainDynamicLength(dynamic value) {
   if (value == null) {
     // ignore: avoid_returning_null
     return null;
   }
 
-  if (_hasLength(value)) {
+  if (hasLength(value)) {
     return value.length as int?;
   }
 
@@ -332,7 +332,7 @@ bool isNull(dynamic value) => value == null;
 
   /// Checks if length of data is GREATER than maxLength.
    bool isLengthGreaterThan(dynamic value, int maxLength) {
-    final length = _obtainDynamicLength(value);
+    final length = obtainDynamicLength(value);
 
     if (length == null) {
       return false;
@@ -343,7 +343,7 @@ bool isNull(dynamic value) => value == null;
 
   /// Checks if length of data is GREATER OR EQUAL to maxLength.
    bool isLengthGreaterOrEqual(dynamic value, int maxLength) {
-    final length = _obtainDynamicLength(value);
+    final length = obtainDynamicLength(value);
 
     if (length == null) {
       return false;
@@ -354,7 +354,7 @@ bool isNull(dynamic value) => value == null;
 
   /// Checks if length of data is LESS than maxLength.
    bool isLengthLessThan(dynamic value, int maxLength) {
-    final length = _obtainDynamicLength(value);
+    final length = obtainDynamicLength(value);
     if (length == null) {
       return false;
     }
@@ -364,7 +364,7 @@ bool isNull(dynamic value) => value == null;
 
   /// Checks if length of data is LESS OR EQUAL to maxLength.
    bool isLengthLessOrEqual(dynamic value, int maxLength) {
-    final length = _obtainDynamicLength(value);
+    final length = obtainDynamicLength(value);
 
     if (length == null) {
       return false;
@@ -375,7 +375,7 @@ bool isNull(dynamic value) => value == null;
 
   /// Checks if length of data is EQUAL to maxLength.
    bool isLengthEqualTo(dynamic value, int otherLength) {
-    final length = _obtainDynamicLength(value);
+    final length = obtainDynamicLength(value);
 
     if (length == null) {
       return false;
