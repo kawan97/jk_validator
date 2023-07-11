@@ -62,6 +62,6 @@ This project is licensed under the [MIT License](https://github.com/kawan97/jk_v
 
 ## Credits
 
-JK Validator is developed and maintained by [kawan pshtiwan , jaza yahya](https://github.com/kawan97).
+JK Validator is developed and maintained by [kawan pshtiwan ](https://github.com/kawan97) And [jaza yahya ](https://github.com/jaza-yahya).
 
 ---
