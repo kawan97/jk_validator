@@ -1,6 +1,6 @@
 name: jk_validator
 description: JK Validator is Dart package for data validation in Flutter. Validate numbers, URLs, emails, and more. Easy and efficient data validation.
-version: 0.0.1
+version: 0.0.2
 repository: https://github.com/kawan97/jk_validator
 
 environment:
